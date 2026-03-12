@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,10 +10,10 @@
 <body>
   <header class="hero">
     <div class="container">
-      <p class="eyebrow">Zero-cost launch â€¢ Netlify-ready</p>
+      <p class="eyebrow">Zero-cost launch • Netlify-ready</p>
       <h1>AI Policy Readiness Checklist</h1>
       <p class="subhead">Know in 10 minutes whether your team can safely deploy AI features without policy debt.</p>
-      <a href="#waitlist" class="btn btn-primary" data-track="cta_primary_click">Get on the waitlist</a>
+      <a href="#waitlist" class="btn btn-primary">Get on the waitlist</a>
       <p class="trust">Used by product, legal, and security leads preparing for AI governance reviews.</p>
     </div>
   </header>
@@ -47,22 +47,17 @@
         <h2>Join the priority waitlist</h2>
         <p>Single-step form. No paid tools required.</p>
 
-        <form id="waitlist-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form id="waitlist-form" name="waitlist" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="waitlist" />
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="project_id" value="PLAY-2026-03-12-003" />
+          <input type="hidden" name="source" value="netlify_git_pipeline" />
+
           <div class="grid form-grid">
-            <label>
-              Full name
-              <input type="text" name="full_name" required autocomplete="name" />
-            </label>
-            <label>
-              Work email
-              <input type="email" name="work_email" required autocomplete="email" />
-            </label>
-            <label>
-              Company
-              <input type="text" name="company" required />
-            </label>
-            <label>
-              Role
+            <label>Full name<input type="text" name="full_name" required /></label>
+            <label>Work email<input type="email" name="work_email" required /></label>
+            <label>Company<input type="text" name="company" required /></label>
+            <label>Role
               <select name="role" required>
                 <option value="">Select role</option>
                 <option value="executive">Executive</option>
@@ -73,8 +68,7 @@
                 <option value="other">Other</option>
               </select>
             </label>
-            <label>
-              Team size
+            <label>Team size
               <select name="team_size" required>
                 <option value="">Select size</option>
                 <option value="1-49">1-49</option>
@@ -83,8 +77,7 @@
                 <option value="1000+">1000+</option>
               </select>
             </label>
-            <label>
-              Target launch timeline
+            <label>Target launch timeline
               <select name="timeline" required>
                 <option value="">Select timeline</option>
                 <option value="0-30">0-30 days</option>
@@ -95,9 +88,6 @@
             </label>
           </div>
 
-          <input type="hidden" name="form-name" value="waitlist" />
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="qualified" id="qualified" value="false" />
           <button type="submit" class="btn btn-primary">Join waitlist</button>
           <p id="form-message" class="form-message" aria-live="polite"></p>
         </form>
@@ -105,32 +95,8 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <small>Â© AI Policy Readiness</small>
-    </div>
-  </footer>
+  <footer class="footer"><div class="container"><small>© AI Policy Readiness</small></div></footer>
 
-  <script>
-    window.LANDING_CONFIG = {
-      analyticsNamespace: "ai_policy_readiness",
-      environment: "production"
-    };
-  </script>
-  <!-- Netlify static form detection fallback -->
-  <form name="waitlist" data-netlify="true" netlify-honeypot="bot-field" hidden>
-    <input type="text" name="full_name" />
-    <input type="email" name="work_email" />
-    <input type="text" name="company" />
-    <input type="text" name="role" />
-    <input type="text" name="team_size" />
-    <input type="text" name="timeline" />
-    <input type="text" name="qualified" />
-    <input type="text" name="project_id" />
-    <input type="text" name="source" />
-    <input type="text" name="submitted_at" />
-    <input type="text" name="bot-field" />
-  </form>
-  <script src='script.js' defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
