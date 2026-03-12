@@ -97,6 +97,20 @@
 
   <footer class="footer"><div class="container"><small>© AI Policy Readiness</small></div></footer>
 
+  <!-- Netlify form detection fallback -->
+  <form name="waitlist" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="waitlist" />
+    <input type="text" name="full_name" />
+    <input type="email" name="work_email" />
+    <input type="text" name="company" />
+    <input type="text" name="role" />
+    <input type="text" name="team_size" />
+    <input type="text" name="timeline" />
+    <input type="text" name="project_id" />
+    <input type="text" name="source" />
+    <input type="text" name="bot-field" />
+  </form>
+
   <script src="script.js" defer></script>
 </body>
 </html>
