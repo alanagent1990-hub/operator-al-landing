@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Policy Readiness Checklist | Join the Waitlist</title>
+  <meta name="description" content="Get the AI Policy Readiness Checklist and join the priority waitlist for implementation support." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Zero-cost launch â€¢ Netlify-ready</p>
+      <h1>AI Policy Readiness Checklist</h1>
+      <p class="subhead">Know in 10 minutes whether your team can safely deploy AI features without policy debt.</p>
+      <a href="#waitlist" class="btn btn-primary" data-track="cta_primary_click">Get on the waitlist</a>
+      <p class="trust">Used by product, legal, and security leads preparing for AI governance reviews.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container grid">
+        <div>
+          <h2>What you get</h2>
+          <ul class="checklist">
+            <li>Policy gap scan across governance, model use, data handling, and incident response</li>
+            <li>Team readiness scoring rubric for launch/no-launch decisions</li>
+            <li>Remediation priorities you can action this quarter</li>
+          </ul>
+        </div>
+        <aside class="card">
+          <h3>Qualification rule</h3>
+          <p>A lead is marked <strong>qualified</strong> when all are true:</p>
+          <ol>
+            <li>Work email (non-free domain)</li>
+            <li>Role is decision-maker/influencer for AI policy</li>
+            <li>Team size is 50+</li>
+            <li>Timeline is 0-90 days</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section id="waitlist" class="section section-alt">
+      <div class="container">
+        <h2>Join the priority waitlist</h2>
+        <p>Single-step form. No paid tools required.</p>
+
+        <form id="waitlist-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <div class="grid form-grid">
+            <label>
+              Full name
+              <input type="text" name="full_name" required autocomplete="name" />
+            </label>
+            <label>
+              Work email
+              <input type="email" name="work_email" required autocomplete="email" />
+            </label>
+            <label>
+              Company
+              <input type="text" name="company" required />
+            </label>
+            <label>
+              Role
+              <select name="role" required>
+                <option value="">Select role</option>
+                <option value="executive">Executive</option>
+                <option value="product_lead">Product Lead</option>
+                <option value="engineering_lead">Engineering Lead</option>
+                <option value="legal_compliance">Legal/Compliance</option>
+                <option value="security_risk">Security/Risk</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label>
+              Team size
+              <select name="team_size" required>
+                <option value="">Select size</option>
+                <option value="1-49">1-49</option>
+                <option value="50-199">50-199</option>
+                <option value="200-999">200-999</option>
+                <option value="1000+">1000+</option>
+              </select>
+            </label>
+            <label>
+              Target launch timeline
+              <select name="timeline" required>
+                <option value="">Select timeline</option>
+                <option value="0-30">0-30 days</option>
+                <option value="31-90">31-90 days</option>
+                <option value="91-180">91-180 days</option>
+                <option value="180+">180+ days</option>
+              </select>
+            </label>
+          </div>
+
+          <input type="hidden" name="form-name" value="waitlist" />
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="qualified" id="qualified" value="false" />
+          <button type="submit" class="btn btn-primary">Join waitlist</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Â© AI Policy Readiness</small>
+    </div>
+  </footer>
+
+  <script>
+    window.LANDING_CONFIG = {
+      analyticsNamespace: "ai_policy_readiness",
+      environment: "production"
+    };
+  </script>
+  <!-- Netlify static form detection fallback -->
+  <form name="waitlist" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="full_name" />
+    <input type="email" name="work_email" />
+    <input type="text" name="company" />
+    <input type="text" name="role" />
+    <input type="text" name="team_size" />
+    <input type="text" name="timeline" />
+    <input type="text" name="qualified" />
+    <input type="text" name="project_id" />
+    <input type="text" name="source" />
+    <input type="text" name="submitted_at" />
+    <input type="text" name="bot-field" />
+  </form>
+  <script src='script.js' defer></script>
+</body>
+</html>
